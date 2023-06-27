@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Form Validation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-r from-rose-400 via-emerald-400 to-indigo-500">
+    <div class="min-h-screen flex flex-col justify-center items-center p-10">
+      <h1 class="text-4xl font-bold text-white mb-4">Car Details Form</h1>
+      <button
+        id="addCarBtn"
+        class="w-1/2 bg-rose-500 text-white leading-tight rounded-md py-2 px-3 my-4 hover:bg-rose-600 transition-color duration-300"
+      >
+        Add a New Car <i class="fa-solid fa-car"></i>
+      </button>
+      <div id="formContainer" class="w-1/2">
+        <form
+          id="form1"
+          class="w-full bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-md p-8 my-2"
+        >
+          <h1 class="text-black text-2xl font-medium mb-2">Car 1</h1>
+
+          <div class="w-full mb-4">
+            <label for="name1" class="block text-sm font-medium mb-2"
+              >Car Name:</label
+            >
+            <input
+              type="text"
+              id="name1"
+              minlength="3"
+              required
+              placeholder="Enter Car Name.."
+              class="w-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg text-white placeholder-gray-600 placeholder-opacity-70 leading-tight rounded-md appearance-none py-2 px-3"
+            />
+          </div>
+
+          <div class="w-full mb-4">
+            <label for="make1" class="block text-sm font-medium mb-2"
+              >Car Make:</label
+            >
+            <input
+              type="text"
+              id="make1"
+              minlength="4"
+              required
+              placeholder="Enter Car Make.."
+              class="w-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg text-white placeholder-gray-600 placeholder-opacity-70 leading-tight rounded-md appearance-none py-2 px-3"
+            />
+          </div>
+
+          <div class="w-full mb-4">
+            <label for="model1" class="block text-sm font-medium mb-2"
+              >Car Model:
+            </label>
+            <input
+              id="model1"
+              type="Number"
+              min="1900"
+              max="2023"
+              step="1"
+              required
+              placeholder="Enter Car Model/Year.."
+              class="w-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg text-white placeholder-gray-600 placeholder-opacity-70 leading-tight rounded-md appearance-none py-2 px-3"
+            />
+          </div>
+
+          <div class="w-full mb-4">
+            <label for="color1" class="block text-sm font-medium mb-2"
+              >Car Color:
+            </label>
+            <input
+              id="color1"
+              type="color"
+              required
+              placeholder="Select Car Color.."
+              class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg text-white placeholder-gray-600 placeholder-opacity-70 leading-tight rounded-md appearance-none py-2 px-3"
+            />
+          </div>
+
+          <div class="w-full mb-4">
+            <label for="price1" class="block text-sm font-medium mb-2"
+              >Car Price (in Lacs):
+            </label>
+            <input
+              id="price1"
+              type="text"
+              minlength="5"
+              min="25000"
+              required
+              placeholder="Enter Car Price.."
+              class="w-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg text-white placeholder-gray-600 placeholder-opacity-70 leading-tight rounded-md appearance-none py-2 px-3"
+            />
+          </div>
+        </form>
+      </div>
+      <button
+        id="submitBtn"
+        class="w-1/2 bg-indigo-500 text-white leading-tight rounded-md py-2 px-3 mt-4 hover:bg-indigo-600 transition-color duration-300"
+      >
+        Add This Car <i class="fas fa-list-check"></i>
+      </button>
+      <div id="submittedFormsContainer"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
